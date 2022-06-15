@@ -1,6 +1,6 @@
 package com.peercolab.homeservicebarbers.mapper;
 
-import com.peercolab.homeservicebarbers.model.Barber;
+import com.peercolab.homeservicebarbers.entity.Barber;
 import com.peercolab.homeservicebarbers.dto.BarberDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

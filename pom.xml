@@ -11,8 +11,8 @@
 	<groupId>com.peercolab</groupId>
 	<artifactId>homeservicebarbers</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>barbershop.mapstruct</name>
-	<description>Home service barber project mapstruct.</description>
+	<name>Home service barber</name>
+	<description>Home service barber project</description>
 	<properties>
 		<java.version>11</java.version>
 		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
