@@ -1,18 +1,15 @@
-package com.peercolab.homeservicebarbers.entity;
+package com.peercolab.homeservicebarbers.dto;
 
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Id;
 
 @Getter
 @Setter
-@Entity
-@Table
-public class Barber {
+public class BarberDTO {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer barber_id;
     private String first_name;
     private String last_name;

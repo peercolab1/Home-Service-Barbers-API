@@ -1,5 +1,6 @@
-package com.peercolab.homeservicebarbers.entity;
+package com.peercolab.homeservicebarbers.model;
 
+import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 
