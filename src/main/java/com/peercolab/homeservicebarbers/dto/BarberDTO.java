@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Setter
 public class BarberDTO {
 
-    @Id
+//    @Id
     private Integer barber_id;
     private String first_name;
     private String last_name;
