@@ -6,7 +6,7 @@ To run this project locally, perform the following steps.
 * Clone project to your machine using git - git clone https://github.com/peercolab1/Home-Service-Barbers-API.git
 * Import the project into your IDE using the maven pom.xml.
 * Run the JUnit tests in the src/test/java folder.
-* Run the app as a Spring Boot app. 
+* Run the api as a Spring Boot app. 
 
 # Technologies Used
 * Spring Initializr 
