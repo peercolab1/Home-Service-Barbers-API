@@ -3,20 +3,22 @@ package com.peercolab.homeservicebarbers.dto.mapper;
 import com.peercolab.homeservicebarbers.dto.ClientDTO;
 import com.peercolab.homeservicebarbers.entity.Client;
 import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
-@Mapper(componentModel = "spring", uses = {})
-public interface ClientMapper extends EntityMapper<ClientDTO, Client>{
+import java.util.List;
 
-    ClientDTO toDto(Client entity);
+@Mapper(componentModel = "spring")
+public interface ClientMapper {
 
-    Client toEntity(ClientDTO dto);
+    ClientMapper INSTANCE = Mappers.getMapper(ClientMapper.class);
 
-    default Client fromId(Long id) {
-        if (id == null) {
-            return null;
-        }
-        Client client = new Client();
-        client.setClientId(id);
-        return client;
-    }
+    ClientDTO modelToDto(Client client);
+
+    List<ClientDTO> modelsToDtos(List<Client> clients);
+
+    Client dtoToModel(ClientDTO clientDTO);
+
+    List<Client> dtosToModels(List<ClientDTO> clientDTOList);
+
+
 }
