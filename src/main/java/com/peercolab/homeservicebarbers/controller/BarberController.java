@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/v1")
 public class BarberController {
 
     @Autowired
     private BarberService barberService;
 
-    @PostMapping("/barbers")
+    @PostMapping("/barber")
     public ResponseEntity<Barber> save(@RequestBody BarberDTO barberDTO) {
         return barberService.saveBarberInfo(barberDTO);
     }
@@ -25,13 +26,13 @@ public class BarberController {
         return barberService.getBarbersInfo();
     }
 
-    @GetMapping("/barbers/{id}")
-    public ResponseEntity<BarberDTO> findById(@PathVariable(value = "id") Integer id){
+    @GetMapping("/barber/{id}")
+    public ResponseEntity<BarberDTO> findById(@PathVariable(value = "id") long id){
         return barberService.getInfoById(id);
     }
 
-    @DeleteMapping("/barbers/{id}")
-    public ResponseEntity<Void> deleteById(@PathVariable(value = "id") Integer id){
+    @DeleteMapping("/barber/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable(value = "id") long id){
         return barberService.deleteInfoById(id);
     }
 }

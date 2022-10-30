@@ -9,14 +9,13 @@ import javax.persistence.Id;
 @Setter
 public class BarberDTO {
 
-//    @Id
-    private Integer barber_id;
-    private String first_name;
-    private String last_name;
+    private long barberId;
+    private String firstName;
+    private String lastName;
     private String phone;
     private String email;
     private String address;
     private String city;
     private String state;
-    private Integer service_id;
+    private Integer serviceId;
 }

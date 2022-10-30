@@ -1,5 +1,10 @@
 package com.peercolab.homeservicebarbers.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class ClientDTO {
     public Long clientId;
     public String firstName;

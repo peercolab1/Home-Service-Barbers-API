@@ -2,7 +2,7 @@ package com.peercolab.homeservicebarbers.service;
 
 import com.peercolab.homeservicebarbers.dto.BarberDTO;
 import com.peercolab.homeservicebarbers.entity.Barber;
-import com.peercolab.homeservicebarbers.mapper.BarberMapper;
+import com.peercolab.homeservicebarbers.dto.mapper.BarberMapper;
 import com.peercolab.homeservicebarbers.repository.BarberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,14 +29,13 @@ public class BarberService {
         return new ResponseEntity<>(barberMapper.modelsToDtos(barberRepository.findAll()), HttpStatus.OK);
     }
 
-    public ResponseEntity<BarberDTO> getInfoById(Integer id){
+    public ResponseEntity<BarberDTO> getInfoById(long id){
         return new ResponseEntity<>(barberMapper.modelToDto(barberRepository.findById(id).get()), HttpStatus.OK);
     }
 
-    public ResponseEntity<Void> deleteInfoById(Integer id){
+    public ResponseEntity<Void> deleteInfoById(long id){
         BarberDTO barberDTO = barberMapper.modelToDto(barberRepository.findById(id).get());
-
-        barberRepository.deleteById(barberDTO.getBarber_id());
+        barberRepository.deleteById(barberDTO.getBarberId());
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
